@@ -1,40 +1,35 @@
-# JDI - Role Intelligence · Editorial Commercial Landing Page V3
+# JDI - Role Intelligence | Commercial Landing Page V4
 
-เวอร์ชันออกแบบใหม่เน้น **Editorial Website** ไม่ใช่ dashboard template: โลโก้แบบ wordmark, ภาพประกอบ, full-bleed photo, ตัวพิมพ์ใหญ่, grid จังหวะสลับ, scroll effects แบบพอดี และ workflow กดดูได้
+เว็บไซต์ขาย **JDI - Role Intelligence** แบบแยกโปรเจกต์ ออกแบบให้ใกล้ภาพอ้างอิงที่เลือก (Hero สีอ่อน + ภาพทีมงานสีสด, navy diagonal, ม่วงอมชมพูเข้ม, Typography ใหญ่, Business Pain cards, Business Impact แบบภาพซ้าย–เนื้อหาขวา)
 
-## วิธีใช้งานผ่านหน้าเว็บ GitHub เท่านั้น
+## อัปโหลดบน GitHub โดยไม่ใช้ Terminal
 
-1. ดาวน์โหลดและ **แตก ZIP**
-2. เปิด https://github.com/DewTT48/JDI
-3. เลือก **Add file → Upload files**
-4. **เลือกทุกไฟล์ภายใน ZIP** (ไม่ต้องอัปโหลด ZIP และไม่ต้องอัปโหลดโฟลเดอร์)
-5. เลือก Commit to `main` แล้วกด **Commit changes** (Replace ไฟล์เดิมที่ชื่อซ้ำ)
-6. ถ้ายังไม่ได้เปิด GitHub Pages ให้ไปที่ **Settings → Pages → Deploy from a branch → main → /(root) → Save**
-7. เปิด https://dewtt48.github.io/JDI/ แล้วทำ hard refresh
+1. แตก ZIP นี้แล้วเลือกไฟล์ทั้งหมดภายใน (ไม่ใช่ไฟล์ ZIP)
+2. เปิด https://github.com/DewTT48/JDI → **Add file → Upload files**
+3. อัปโหลดทุกไฟล์ลง **root** ของ Repository โดยให้ `index.html` อยู่ระดับแรก
+4. หากมีไฟล์ชื่อเดิม ให้ GitHub แทนที่ไฟล์และ Commit changes ลง branch `main`
+5. ตรวจหน้า **Settings → Pages** ว่า Source = `Deploy from a branch`, Branch = `main`, Folder = `/ (root)`
+6. หน้าเว็บไซต์ควรเผยแพร่ที่ https://dewtt48.github.io/JDI/
 
-### ไฟล์หลัก (ทั้งหมดอยู่ระดับเดียวกัน)
+## ไฟล์ใน ZIP — ไม่มีโฟลเดอร์
 
-- `index.html` — Sales page, SEO metadata, demo form
-- `styles.css` — Design, layout, animation, responsive, print-safe font fallbacks
-- `script.js` — Navigation, progress, workflow tabs, product tabs, dialog and demo lead handler
-- `hero-team.webp` — ภาพประกอบ Hero (จัดทำเพื่อเว็บไซต์ ไม่ใช่ทีมงานหรือลูกค้าจริง)
-- `story-team.webp` — ภาพประกอบ Section Business Impact
-- `favicon.svg` — favicon ใหม่
-- `privacy.html` — ข้อมูลความเป็นส่วนตัวของฟอร์มติดต่อ (ต้องตรวจทานก่อนเปิดขายจริง)
-- `README.md` — คู่มือนี้
+- `index.html` : เนื้อหาหน้าเว็บไซต์ (เป็นข้อความจริง ไม่ baked-in ในภาพ)
+- `styles.css` : ดีไซน์และ responsive พร้อม motion แบบ reduced-motion friendly
+- `script.js` : เมนูมือถือ, Workflow แบบโต้ตอบ, แท็บสินค้า, ฟอร์มเดโม, scroll reveal
+- `hero-meeting.webp` : ภาพสีทีมงานสำหรับ Hero (ไฟล์ภาพแยก, ไม่ฝังตัวอักษร)
+- `team-discussion.webp` : ภาพสีทีมงานสำหรับ Business Impact จากภาพอ้างอิงที่ได้รับอนุมัติ (ครอปและปรับคมชัดแล้ว)
+- `favicon.svg` : ไอคอน JDI
+- `privacy.html` : ข้อมูลความเป็นส่วนตัวของผู้ติดต่อ
+- `README.md` : คู่มือนี้
 
-## ข้อควรรู้
+## สิ่งที่ควรทราบก่อนเปิดรับลูกค้า
 
-**ความสามารถจริง:** ใช้เนื้อหาจากเอกสาร SALES_PAGE_CONTENT_BRIEF_TH.md (V1.1.19) ระบบมี Structured Position Intake, Human Review, Department Confirmation, Approved JD Database, Version Snapshot และส่งมอบเอกสารตามการตั้งค่า
+- ภาพประกอบบุคคลเป็นภาพที่สร้างขึ้นเพื่อแสดงแนวคิด ไม่ใช่บุคลากรหรือลูกค้าจริง
+- ภาพหน้าจอระบบใน Product section ยังอ้างอิงภาพจากเว็บไซต์ระบบรุ่นก่อนหน้า โดยโหลดจาก `https://dewtt48.github.io/role-intelligence/product/` และมี Fallback หากโหลดไม่ได้ ควรแทนที่ด้วยภาพหน้าจอจริงรุ่น V1.1.19 เมื่อพร้อม
+- แบบฟอร์มขอเดโมใช้ Google Apps Script Lead Endpoint เดิม (มี `source=jdi-editorial-v4` เพื่อแยกช่องทาง) **ยังไม่ได้ส่ง Lead ทดลองจริง** โปรดทดสอบปลายทางและตรวจข้อความ privacy ก่อนใช้เก็บข้อมูลลูกค้า
+- JDI เป็นระบบจัดทำ ตรวจยืนยัน และจัดเก็บ JD ไม่ใช่ระบบประเมิน Performance/KPI โดยตรง; Recruitment, KPI, Career Path ฯลฯ เป็นการนำข้อมูล JD ไปต่อยอด ไม่ใช่โมดูลที่รับรองว่ามีครบในระบบ
+- ไม่กล่าวอ้าง ROI การประหยัดเวลา หรือมาตรฐานความปลอดภัยที่ยังไม่ได้รับการพิสูจน์
 
-**ไม่ใช่ระบบ Performance:** เว็บไซต์สื่อว่า JD ที่ชัดขึ้นเป็นข้อมูลตั้งต้นสำหรับ KPI และการบริหารผลงาน โดยไม่รับรองว่า JDI คำนวณ KPI หรือประเมิน Performance ได้เอง
+## การแก้ไขครั้งต่อไป
 
-**ภาพสินค้า:** ส่วน "ดูระบบจริง" ยังคงโหลด screenshot จาก `https://dewtt48.github.io/role-intelligence/product/` ไม่รวมใน ZIP ต้องถ่าย screenshot ของ V1.1.19 รุ่นล่าสุดและเปลี่ยนเมื่อพร้อม
-
-**Lead form:** ใช้ Google Apps Script endpoint ที่อยู่ใน landing page เดิม (แยก source เป็น `jdi-editorial-v3`) ต้องทดสอบส่งฟอร์มจริงและตรวจสอบ privacy notice/นโยบายจัดเก็บข้อมูลก่อนเผยแพร่
-
-**บริการ:** เว็บเป็น static HTML/CSS/JS ไม่ต้องติดตั้ง npm, build หรือใช้ Terminal
-
-**Motion:** มีการแสดงผลตอน scroll, marquee และ photo drift แต่เคารพการตั้งค่า reduced motion ของผู้ใช้
-
-**การเปลี่ยนโค้ด:** โปรเจกต์นี้แยกจาก `DewTT48/role-intelligence` เดิม
+เนื้อหา: `index.html` · สี/การจัดวาง: `styles.css` · ปุ่มและการโต้ตอบ: `script.js` · รูปภาพ: เปลี่ยนไฟล์ `.webp` ชื่อเดิม

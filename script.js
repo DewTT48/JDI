@@ -136,6 +136,8 @@
     });
   });
 
+  if (productTabs.length) setProduct(0);
+
   // Demo request form uses existing inquiry endpoint. Do not report success before response.
   const dialog = document.getElementById('demoDialog');
   const form = document.getElementById('demoForm');

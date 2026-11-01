@@ -1,5 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="JDI">
-  <rect width="64" height="64" rx="10" fill="#202c7d"/>
-  <text x="7" y="44" font-family="Arial,Helvetica,sans-serif" font-size="35" font-weight="900" letter-spacing="-3" fill="#ffffff">JDI</text>
-  <rect x="48" y="10" width="9" height="9" fill="#ff4c96"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-label="JDI - Role Intelligence">
+  <title>JDI - Role Intelligence</title>
+  <g transform="translate(1.93 13.03) scale(1.1100)" fill-rule="evenodd">
+    <path fill="#0C1536" d="M2 32 2 35 3 36 3 40 4 41 4 42 6 44 6 45 7 45 8 46 9 46 10 47 14 47 15 48 17 48 18 47 22 47 23 46 24 46 28 42 29 42 30 43 30 47 48 47 49 46 50 46 51 45 52 45 55 42 56 43 56 47 67 47 67 3 57 3 56 4 56 8 55 9 54 8 54 7 53 6 52 6 50 4 48 4 47 3 18 3 18 37 17 38 15 38 14 37 14 36 13 35 13 31 3 31Z M42 12 43 12 45 14 45 36 43 38 42 38 41 37 41 13Z"/>
+    <circle cx="75" cy="54" r="5.4" fill="#AA1685"/>
+  </g>
 </svg>

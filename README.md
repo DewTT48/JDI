@@ -1,4 +1,4 @@
-# JDI - Role Intelligence | Commercial Landing Page V4 ใหม่
+# JDI - Role Intelligence | Commercial Landing Page V4
 
 เว็บไซต์ขาย **JDI - Role Intelligence** แบบแยกโปรเจกต์ ออกแบบให้ใกล้ภาพอ้างอิงที่เลือก (Hero สีอ่อน + ภาพทีมงานสีสด, navy diagonal, ม่วงอมชมพูเข้ม, Typography ใหญ่, Business Pain cards, Business Impact แบบภาพซ้าย–เนื้อหาขวา)
 
@@ -46,3 +46,19 @@
 ### Updating existing GitHub Pages via web only
 
 แตก ZIP แล้วอัปโหลดไฟล์ทุกไฟล์ใน Root ของ Repository JDI (ให้ `index.html`, `styles.css`, `script.js` อยู่ที่ Root เหมือนเดิม) GitHub จะให้ Commit เพื่อแทนที่ไฟล์ชื่อซ้ำได้
+
+## V4.2 — Brand and benefit polish (2026-11-01)
+
+- Favicon เปลี่ยนเป็นโลโก้ JDI. สีน้ำเงินเข้มและจุดสีม่วงอมชมพูบนพื้นโปร่งใส ตรงกับ Wordmark ในหน้าเว็บ (คัดลอกเส้นรูปทรงจากโลโก้ที่แสดงบนเว็บไซต์)
+- เพิ่มเวอร์ชัน favicon `?v=4.2` เพื่อให้เบราว์เซอร์โหลดไอคอนใหม่ ไม่ติดแคชเดิม
+- ปุ่ม **ขอนัดสาธิต** ใน Product section เปลี่ยนจากกรอบเส้นเป็นปุ่มหลัก Gradient เดียวกับ Navigation, Hero, Bottom CTA และปุ่มส่งฟอร์ม
+- ส่วน **Value for Every Team** ตัดคำว่า `PAIN` ที่นำหน้าข้อความออกทั้ง 3 กลุ่ม แต่ **คงเส้นแนวตั้งสีม่วง** พร้อมเพิ่มระยะห่างให้อ่านสบายขึ้น
+- ไม่เปลี่ยนเนื้อหา Feature, Workflow, Lead endpoint, ลิงก์ข้อมูล หรือไฟล์ภาพประกอบ
+
+### Files required when updating V4.1
+
+ต้องแทนที่อย่างน้อย: `index.html`, `styles.css`, `favicon.svg`, `privacy.html`, `README.md`
+
+ZIP นี้รวมทั้ง 8 ไฟล์ในระดับ root เหมือนเดิม จึงสามารถเลือกไฟล์ทั้งหมดแล้วอัปโหลดทับทาง GitHub Web ได้เลย
+
+- Cache bust CSS ใน `index.html` และ `privacy.html` (`styles.css?v=4.2`) เพื่อไม่ให้ปุ่มบนหน้าเว็บยังใช้สีจาก CSS เก่าที่ติดแคช

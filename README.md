@@ -1,58 +1,40 @@
-# JDI - Role Intelligence
+# JDI - Role Intelligence · Editorial Commercial Landing Page V3
 
-Commercial Sales Page แยกใหม่สำหรับ **JDI - Role Intelligence** โดยไม่แก้ไข Repo `DewTT48/role-intelligence` เดิม
+เวอร์ชันออกแบบใหม่เน้น **Editorial Website** ไม่ใช่ dashboard template: โลโก้แบบ wordmark, ภาพประกอบ, full-bleed photo, ตัวพิมพ์ใหญ่, grid จังหวะสลับ, scroll effects แบบพอดี และ workflow กดดูได้
 
-## จุดขายหลัก
+## วิธีใช้งานผ่านหน้าเว็บ GitHub เท่านั้น
 
-- **Business value / Role clarity** — ทำให้บทบาท ความรับผิดชอบ และผลลัพธ์ที่คาดหวังชัดเจน เพื่อเป็นข้อมูลตั้งต้นในการกำหนด KPI และบริหาร Performance (ไม่ใช่ระบบประเมิน Performance โดยตรง)
-- **Digital Role Data Foundation** — Approved JD Database พร้อมประวัติ Version Snapshot และ Audit
-- **Human-owned Workflow** — Requester → HR → AI-assisted draft → HR review → Department confirmation → Finalize / Publish → Delivery
+1. ดาวน์โหลดและ **แตก ZIP**
+2. เปิด https://github.com/DewTT48/JDI
+3. เลือก **Add file → Upload files**
+4. **เลือกทุกไฟล์ภายใน ZIP** (ไม่ต้องอัปโหลด ZIP และไม่ต้องอัปโหลดโฟลเดอร์)
+5. เลือก Commit to `main` แล้วกด **Commit changes** (Replace ไฟล์เดิมที่ชื่อซ้ำ)
+6. ถ้ายังไม่ได้เปิด GitHub Pages ให้ไปที่ **Settings → Pages → Deploy from a branch → main → /(root) → Save**
+7. เปิด https://dewtt48.github.io/JDI/ แล้วทำ hard refresh
 
-เนื้อหายึด `SALES_PAGE_CONTENT_BRIEF_TH.md` V1.1.19 เป็นข้อมูลจริง และไม่อ้างประสิทธิภาพ/ROI ที่ยังไม่วัดผล
+### ไฟล์หลัก (ทั้งหมดอยู่ระดับเดียวกัน)
 
-## โครงสร้างโปรเจกต์
+- `index.html` — Sales page, SEO metadata, demo form
+- `styles.css` — Design, layout, animation, responsive, print-safe font fallbacks
+- `script.js` — Navigation, progress, workflow tabs, product tabs, dialog and demo lead handler
+- `hero-team.webp` — ภาพประกอบ Hero (จัดทำเพื่อเว็บไซต์ ไม่ใช่ทีมงานหรือลูกค้าจริง)
+- `story-team.webp` — ภาพประกอบ Section Business Impact
+- `favicon.svg` — favicon ใหม่
+- `privacy.html` — ข้อมูลความเป็นส่วนตัวของฟอร์มติดต่อ (ต้องตรวจทานก่อนเปิดขายจริง)
+- `README.md` — คู่มือนี้
 
-โปรเจกต์ใช้ HTML, CSS, JavaScript แบบ Static ไม่ต้องติดตั้ง Dependencies และใช้บน GitHub Pages ได้
+## ข้อควรรู้
 
-- `index.html`: Commercial landing page ภาษาไทย
-- `styles.css`: Responsive design system Navy / Blue / Gold
-- `script.js`: Navigation, workflow tabs, product gallery, demo form
-- `privacy.html`: ข้อมูลการรับข้อมูลจากแบบฟอร์ม (โปรดตรวจทานก่อนเปิดใช้งานจริง)
-- `assets/favicon.svg`: favicon
-- `.github/workflows/deploy.yml`: Publish เว็บไซต์ผ่าน GitHub Pages
-- `tests/check_site.py`: ตรวจสอบเนื้อหาโครงสร้างและลิงก์พื้นฐาน
+**ความสามารถจริง:** ใช้เนื้อหาจากเอกสาร SALES_PAGE_CONTENT_BRIEF_TH.md (V1.1.19) ระบบมี Structured Position Intake, Human Review, Department Confirmation, Approved JD Database, Version Snapshot และส่งมอบเอกสารตามการตั้งค่า
 
-## เปิดดูในเครื่อง
+**ไม่ใช่ระบบ Performance:** เว็บไซต์สื่อว่า JD ที่ชัดขึ้นเป็นข้อมูลตั้งต้นสำหรับ KPI และการบริหารผลงาน โดยไม่รับรองว่า JDI คำนวณ KPI หรือประเมิน Performance ได้เอง
 
-```bash
-python3 -m http.server 8000
-```
+**ภาพสินค้า:** ส่วน "ดูระบบจริง" ยังคงโหลด screenshot จาก `https://dewtt48.github.io/role-intelligence/product/` ไม่รวมใน ZIP ต้องถ่าย screenshot ของ V1.1.19 รุ่นล่าสุดและเปลี่ยนเมื่อพร้อม
 
-เปิด `http://localhost:8000/` และรันการตรวจสอบ:
+**Lead form:** ใช้ Google Apps Script endpoint ที่อยู่ใน landing page เดิม (แยก source เป็น `jdi-editorial-v3`) ต้องทดสอบส่งฟอร์มจริงและตรวจสอบ privacy notice/นโยบายจัดเก็บข้อมูลก่อนเผยแพร่
 
-```bash
-python3 tests/check_site.py
-node --check script.js
-```
+**บริการ:** เว็บเป็น static HTML/CSS/JS ไม่ต้องติดตั้ง npm, build หรือใช้ Terminal
 
-## Deploy ไป GitHub Pages
+**Motion:** มีการแสดงผลตอน scroll, marquee และ photo drift แต่เคารพการตั้งค่า reduced motion ของผู้ใช้
 
-1. อัปโหลดไฟล์ทั้งหมดขึ้น Repository `DewTT48/JDI` ที่ branch `main`
-2. ไปที่ **Settings → Pages → Build and deployment → Source** เลือก **GitHub Actions**
-3. ตรวจสอบสถานะในแท็บ **Actions** และเปิด `https://dewtt48.github.io/JDI/` เมื่อ workflow สำเร็จ
-
-**หมายเหตุ:** หาก GitHub Pages ยังไม่เปิดใช้งานใน Repo การ Deploy อาจยังไม่สำเร็จจนกว่าจะตั้งค่า Source
-
-## ข้อมูลที่ต้องตรวจสอบก่อน Campaign จริง
-
-- ฟอร์มส่ง Lead ไปยัง **endpoint เดิม** ของ Role Intelligence โดยใช้ `source=jdi-commercial-v1` แยกจากเว็บเดิม (ไฟล์ `script.js`)
-- ต้องทดสอบการรับ Lead แบบ end-to-end กับ Google Apps Script และยืนยันการขอ Consent จริง
-- Product gallery แสดงภาพจากเว็บไซต์เดิม 3 ภาพชั่วคราว (ผ่าน public URL) ควรถ่าย Screenshot V1.1.19 จริงจากระบบก่อนเผยแพร่เชิงพาณิชย์
-- ในเว็บไซต์มีภาพจำลองเพื่ออธิบาย Workflow อย่างชัดเจนว่าเป็นภาพแนวคิด ไม่ใช่ภาพจริง
-- ตรวจสอบเงื่อนไขราคา/แพ็กเกจและนโยบายความเป็นส่วนตัวกับผู้ดูแลก่อนเผยแพร่
-
-## Brand
-
-JDI - Role Intelligence / Clear Roles. Better People Decisions.
-
-ชื่อ Google Workspace ไม่อยู่ใน Hero หรือการวางตำแหน่งสินค้า สถาปัตยกรรมทางเทคนิคระบุอย่างตรงไปตรงมาเฉพาะบริบทการส่งเอกสาร/ข้อมูลและความเป็นส่วนตัว
+**การเปลี่ยนโค้ด:** โปรเจกต์นี้แยกจาก `DewTT48/role-intelligence` เดิม

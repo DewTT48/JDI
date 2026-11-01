@@ -179,7 +179,7 @@
     setHidden('page_url', location.href);
     setHidden('user_agent', navigator.userAgent);
     setHidden('message_body', message);
-    setHidden('message', '[เรื่องที่ติดต่อ: ขอเดโม JDI]\n' + message);
+    setHidden('message', '[เรื่องที่ติดต่อ: ขอนัดสาธิต JDI]\n' + message);
     form.action = LEAD_ENDPOINT;
     submit.disabled = true;
     status.textContent = 'กำลังส่งคำขอ...';

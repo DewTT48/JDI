@@ -33,3 +33,16 @@
 ## การแก้ไขครั้งต่อไป
 
 เนื้อหา: `index.html` · สี/การจัดวาง: `styles.css` · ปุ่มและการโต้ตอบ: `script.js` · รูปภาพ: เปลี่ยนไฟล์ `.webp` ชื่อเดิม
+
+
+## V4.1 — Requested polish (2026-11-01)
+
+- ใช้ CTA เดียวกันทุกจุด: **ขอนัดสาธิต** (Navigation, Hero, Product, Bottom CTA และ Dialog title)
+- จัดชื่อช่องกรอกกับดอกจัน `*` ให้อยู่บรรทัดเดียวกัน ไม่ตกเป็น Flex row ของตนเอง
+- ปรับ Value for Every Team เป็น 3 กลุ่ม **Management, Managers & Employees, HR & OD** โดยเริ่มจาก Pain ของแต่ละฝ่าย แล้วค่อยเสนอประโยชน์ที่ JDI ช่วยได้จริง
+- วางตัวหนังสือวิ่งของ Keyword Strip ไว้เหนือเส้นตกแต่งสีชมพู ด้วย Layer / z-index ที่ชัดเจน
+- ไม่มีการเปลี่ยนแปลง endpoint รับ Lead, Workflow ของผลิตภัณฑ์ หรือไฟล์ภาพ
+
+### Updating existing GitHub Pages via web only
+
+แตก ZIP แล้วอัปโหลดไฟล์ทุกไฟล์ใน Root ของ Repository JDI (ให้ `index.html`, `styles.css`, `script.js` อยู่ที่ Root เหมือนเดิม) GitHub จะให้ Commit เพื่อแทนที่ไฟล์ชื่อซ้ำได้

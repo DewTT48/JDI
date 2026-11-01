@@ -1,4 +1,4 @@
-# JDI - Role Intelligence | Commercial Landing Page V4
+# JDI - Role Intelligence | Commercial Landing Page V4 ใหม่
 
 เว็บไซต์ขาย **JDI - Role Intelligence** แบบแยกโปรเจกต์ ออกแบบให้ใกล้ภาพอ้างอิงที่เลือก (Hero สีอ่อน + ภาพทีมงานสีสด, navy diagonal, ม่วงอมชมพูเข้ม, Typography ใหญ่, Business Pain cards, Business Impact แบบภาพซ้าย–เนื้อหาขวา)
 
